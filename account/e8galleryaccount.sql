@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS HealthChecker (
+    id CHARACTER VARYING NOT NULL,
+    PRIMARY KEY (id)
+);
+
+ALTER TABLE HealthChecker OWNER TO postgres;
+
+INSERT INTO HealthChecker(id) VALUES ('e574abc3-2a08-4cd5-8324-34c1a5500c23');
