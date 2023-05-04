@@ -99,9 +99,6 @@
                 <version>3.11.0</version>
                 <configuration>
                     <mainClass>org.e8.MainApplication</mainClass>
-                    <source>12</source>
-                    <target>12</target>
-                    <debug>true</debug>
                     <optimize>true</optimize>
                 </configuration>
                 <executions>
