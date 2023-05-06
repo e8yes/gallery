@@ -1,8 +1,9 @@
 # Account Service
-This module serves requests which help estasblish the identity of a human user. It offers the basis for the determination of correct behaviors in other e8Gallery services.
+This module provides APIs to help estasblish the identity of a human user. The JWT identification this module prodouced encodes necessary information for other e8Gallery services to make crucial access control decisions.
 
 ## API Usages
 
 ## Development Setup
-### Relational database
-It uses the PostgreSQL DBMS engine for storing relational data. Version 14.5 or later is recommended. After installation, please create a database named e8galleryaccount. Running the statements in `e8galleryaccount.sql` will set up the schema for this service.
+It uses docker for the building, testing and running of the e8 gallery account server. The commands below was tested on Docker version 23.0.5. 
+1. To build the docker image, you can use the command ```docker build -t e8galleryaccount:latest .``` under this directory.
+2. To run the docker image, you can use the command ```docker run -it e8galleryaccount:latest```. This command automatically runs all the tests before starting the account server.
