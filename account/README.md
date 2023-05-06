@@ -2,6 +2,18 @@
 This module provides APIs to help estasblish the identity of a human user. The JWT identification this module prodouced encodes necessary information for other e8Gallery services to make crucial access control decisions.
 
 ## API Usages
+### Health Check
+path ```/health/check```<br/>
+method ```GET```<br/>
+content-type ```application/json```<br/>
+request ```None```<br/>
+response<br/>
+```json
+{
+  "healthCheckerId": "string",
+  "checkedAt": "datetime",
+}
+```
 
 ## Development Setup
 It uses docker for the building, testing and running of the e8 gallery account server. The commands below was tested on Docker version 23.0.5. 
