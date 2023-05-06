@@ -76,8 +76,28 @@ errorType can be one of ```["NONE", "UNKNOWN_EMAIL", "RATE_LIMITED"]```
   "errorType": "string",
 }
 ```
-the jwtToken is valid for a maximum of 10 minutes.
+The jwtToken is valid for a maximum of 10 minutes.
 errorType can be one of ```["NONE", "UNKNOWN_EMAIL", "INCORRECT_PASSWORD"]```
+
+### Renew Identity Authentication
+- path ```/account/authentication/renew```
+- method ```PUT```
+- content-type ```application/json```
+- request
+```json
+{
+  "outdatedJwtToken": "string",
+}
+```
+The outdatedJwtToken can only be renewed in 5 minutes after expiry.
+- response
+```json
+{
+  "jwtToken": "string",
+  "errorType": "string",
+}
+```
+errorType can be one of ```["NONE", "TOKEN_TOO_OLD", "TOKEN_INCORRECT"]```
 
 ### Health Check
 - path ```/health/check```
