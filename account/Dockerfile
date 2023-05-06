@@ -3,6 +3,7 @@ FROM ubuntu:23.04
 # 1. Installs and launches all the required tools, packages and services.
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update &&                       \
+    apt upgrade -y &&                   \
     apt install -y maven                \
                    openjdk-20-jdk       \
                    openjdk-20-jre       \
