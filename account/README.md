@@ -3,11 +3,11 @@ This module provides APIs to help estasblish the identity of a human user. The J
 
 ## API Usages
 ### Health Check
-path ```/health/check```<br/>
-method ```GET```<br/>
-content-type ```application/json```<br/>
-request ```None```<br/>
-response<br/>
+- path ```/health/check```
+- method ```GET```
+- content-type ```application/json```
+- request ```None```
+- response
 ```json
 {
   "healthCheckerId": "string",
