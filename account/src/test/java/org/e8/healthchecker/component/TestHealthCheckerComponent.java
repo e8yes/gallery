@@ -1,7 +1,5 @@
 package org.e8.healthchecker.component;
 
-import org.e8.healthchecker.component.EmptyHealthCheckerException;
-import org.e8.healthchecker.component.HealthCheckerComponent;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +16,7 @@ public class TestHealthCheckerComponent {
     private HealthCheckerComponent comp;
     
     @Test
-    public void testQueryLatestId() throws EmptyHealthCheckerException {
+    public void whenQueryLatestId_thenReturnSetValue() throws EmptyHealthCheckerException {
         String latestId = comp.queryLatestId();
         Assert.assertEquals("e574abc3-2a08-4cd5-8324-34c1a5500c23", latestId);
         
