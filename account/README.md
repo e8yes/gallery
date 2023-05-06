@@ -2,6 +2,25 @@
 This module provides APIs to help estasblish the identity of a human user. The JWT identification this module prodouced encodes necessary information for other e8Gallery services to make crucial access control decisions.
 
 ## API Usages
+### Account Registration by Email and Password
+- path ```/account/registration/internal```
+- method ```POST```
+- content-type ```application/json```
+- request 
+```json
+{
+  "email": "string",
+  "password": "string",
+}
+```
+- response
+```json
+{
+  "errorType": "string",
+}
+```
+errorType can be one of ```["NONE", "INVALID_EMAIL", "INVALID_PASSWORD", "EMAIL_ALREADY_EXISTED"]```
+
 ### Health Check
 - path ```/health/check```
 - method ```GET```
