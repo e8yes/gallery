@@ -89,7 +89,7 @@ errorType can be one of ```["NONE", "UNKNOWN_EMAIL", "INCORRECT_PASSWORD"]```
   "outdatedJwtToken": "string",
 }
 ```
-The outdatedJwtToken can only be renewed in 5 minutes after expiry.
+The outdatedJwtToken can only be renewed within 5 minutes after expiry.
 - response
 ```json
 {
