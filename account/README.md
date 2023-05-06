@@ -3,7 +3,7 @@ This module provides APIs to help estasblish the identity of a human user. The J
 
 ## API Usages
 ### Account Registration by Email and Password
-- path ```/account/registration/internal```
+- path ```/account/registration/email-password```
 - method ```POST```
 - content-type ```application/json```
 - request 
@@ -20,6 +20,42 @@ This module provides APIs to help estasblish the identity of a human user. The J
 }
 ```
 errorType can be one of ```["NONE", "INVALID_EMAIL", "INVALID_PASSWORD", "EMAIL_ALREADY_EXISTED"]```
+
+### Email Verification via Token
+- path ```/account/registration/verify```
+- method ```POST```
+- content-type ```application/json```
+- request 
+```json
+{
+  "token": "string",
+}
+```
+- response
+```json
+{
+  "errorType": "string",
+}
+```
+errorType can be one of ```["NONE", "INVALID_TOKEN"]```
+
+### Resend Verification Email
+- path ```/account/registration/resend-verification-email```
+- method ```POST```
+- content-type ```application/json```
+- request 
+```json
+{
+  "email": "string",
+}
+```
+- response
+```json
+{
+  "errorType": "string",
+}
+```
+errorType can be one of ```["NONE", "UNKNOWN_EMAIL", "RATE_LIMITED"]```
 
 ### Health Check
 - path ```/health/check```
